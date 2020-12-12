@@ -1,0 +1,120 @@
+/*....header section
+...........................*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  background: rgba(0, 0, 0, 0.2);
+
+  #header {
+    padding: 1.25rem 0;
+    transition: ease 0.5s;
+  }
+
+  .header_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      width: 200px;
+    }
+
+    .sidenav {
+      .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        li + li {
+          @include padding(left, 1.5);
+
+          @include media(">=xl") {
+            @include padding(left, 1.875);
+          }
+        }
+
+        a {
+          color: color(light);
+          font-weight: weight(medium);
+
+          @include hover {
+            color: color(primary-light);
+          }
+        }
+      }
+    }
+
+    @include media("<lg") {
+      .bars {
+        display: block;
+        font-size: 1.75rem;
+        color: color(light);
+      }
+      .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 9;
+        top: 0;
+        right: 0;
+        @include set-background(color(dark));
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding: 4rem 0 2rem;
+        text-align: center;
+
+        .menu {
+          flex-direction: column;
+          justify-content: flex-start;
+          height: 100%;
+
+          li + li {
+            padding: 0;
+            @include margin(top, 1);
+          }
+
+          li {
+            font-size: 1.25rem;
+          }
+
+          li:last-child {
+            margin-top: auto;
+          }
+        }
+
+        .closebtn {
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @include set-background(color(dark));
+          padding: 0;
+          width: 3.75rem;
+          height: 3.75rem;
+          text-align: center;
+          font-size: 1.5rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.sticky {
+  position: relative;
+  top: 0;
+  width: 100%;
+  @include set-background(color(dark));
+  transition: ease 0.5s;
+  z-index: 9;
+  padding: 0.5rem 0 !important;
+}
+.closebtn,
+.bars {
+  display: none;
+}

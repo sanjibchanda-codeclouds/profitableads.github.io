@@ -1,0 +1,88 @@
+// Color theme
+
+$primary: #fd5e00 !default;
+$primary-light: #fda900 !default;
+$primary-dark: #ff4700 !default;
+$secondary: #ff4d00 !default;
+$accent: #6d5e58 !default;
+$bg: #010002 !default;
+$bg-dark: #262626 !default;
+$light: #fff !default;
+$dark: #000 !default;
+$border: #645454 !default;
+
+$error: #e80000 !default;
+$success: #06c167 !default;
+$warning: #ffc107 !default;
+
+// Links
+
+$link-color: #d23c00 !default;
+$link-hover-color: $secondary !default;
+
+//user changes theme colors:
+$color: (
+  primary: $primary,
+  primary-light: $primary-light,
+  primary-dark: $primary-dark,
+  secondary: $secondary,
+  accent: $accent,
+  link: $link-color,
+  link-hover: $link-hover-color,
+  bg: $bg,
+  bg-dark: $bg-dark,
+  light: $light,
+  dark: $dark,
+  border: $border,
+  error: $error,
+  success: $success,
+  warning: $warning,
+) !default;
+
+// font-family
+
+$ff-base: "metropolisregular";
+$ff-heading: "metropolisbold";
+
+// Typography
+
+$spacer: 5rem;
+$fs-base: 1rem !default; // Assumes the browser default, typically `16px`
+
+$lh-base: 1.6 !default;
+$lh-heading: 1.2 !default;
+
+$h1: $fs-base * 2.5 !default;
+$h2: $fs-base * 2 !default;
+$h3: $fs-base * 1.75 !default;
+$h4: $fs-base * 1.5 !default;
+$h5: $fs-base * 1.25 !default;
+$h6: $fs-base !default;
+$fs-sm: $fs-base * 0.938 !default;
+
+// font-weight
+$weight: (
+  thin: 100,
+  exlight: 200,
+  light: 300,
+  regular: 400,
+  medium: 500,
+  smbold: 600,
+  bold: 700,
+  exbold: 800,
+  black: 900,
+);
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$sizes: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$sizes: map-merge(
+  (
+    25: 25%,
+    50: 50%,
+    75: 75%,
+    100: 100%,
+    auto: auto,
+  ),
+  $sizes
+);
