@@ -457,7 +457,7 @@
           transform: translateX(-50%);
           width: 6rem;
           height: 1px;
-          background-color: color(border);
+          @include set-background(lighten(color(border), 30%));
         }
 
         &::after {
@@ -468,7 +468,7 @@
           transform: translateX(-50%);
           width: 6rem;
           height: 1px;
-          background-color: color(border);
+          @include set-background(lighten(color(border), 30%));
         }
 
         .cross {
@@ -490,6 +490,7 @@
         li {
           position: relative;
           @include border(top);
+          border-color: lighten(color(border), 30%);
           padding: 0.75rem 0 0.75rem 2rem;
 
           &::before {
@@ -500,6 +501,26 @@
             top: 0.625rem;
             color: color(primary-light);
             font-size: 1.25rem;
+          }
+
+          .badge {
+            display: inline-block;
+            @include set-background(color(primary-dark));
+            padding: 0.125rem 2.5rem 0.125rem 0.5rem;
+            font-size: 0.75rem;
+            position: relative;
+
+            &:after {
+              content: "";
+              position: absolute;
+              top: 0;
+              right: 0;
+              width: 0;
+              height: 0;
+              @include border(top, 11px, transparent);
+              @include border(right, 20px, color(light));
+              @include border(bottom, 12px, transparent);
+            }
           }
         }
       }
@@ -522,70 +543,75 @@
   h3 {
     text-align: center;
     margin-bottom: 0.5em;
+    color: color(dark);
   }
 
   .sub {
     text-align: center;
     font-weight: weight(bold);
+    color: color(dark);
   }
 
   .slider {
     @include margin(top, 4.375);
 
     .item {
-      border: 2px solid color(primary-light);
-      padding: 3.75rem 1.875rem;
-      margin: 0 0.75rem;
-      position: relative;
-      min-height: 305px;
+      padding: 1rem 0.75rem;
 
-      .author {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        @include margin(top, 1.25);
+      &_box {
+        border: 2px solid color(primary-light);
+        padding: 3.75rem 1.875rem;
+        position: relative;
+        min-height: 305px;
 
-        .testi {
-          @include margin(right, 0.75);
-          width: auto;
+        .author {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          @include margin(top, 1.25);
+
+          .testi {
+            @include margin(right, 0.75);
+            width: auto;
+          }
+
+          p {
+            font-size: 0.938rem;
+          }
+
+          span {
+            font-weight: weight(bold);
+            display: block;
+          }
         }
 
-        p {
-          font-size: 0.938rem;
+        &:before {
+          content: "";
+          position: absolute;
+          left: 1.875rem;
+          top: -1.25rem;
+          background-image: url(../images/quote-left.svg);
+          background-color: #fff;
+          background-size: 70%;
+          background-repeat: no-repeat;
+          width: 6rem;
+          height: 3rem;
+          background-position: center;
         }
 
-        span {
-          font-weight: weight(bold);
-          display: block;
+        &:after {
+          content: "";
+          position: absolute;
+          right: 1.875rem;
+          bottom: -1.25rem;
+          background-image: url(../images/quote-right.svg);
+          background-color: #fff;
+          background-size: 70%;
+          background-repeat: no-repeat;
+          width: 6rem;
+          height: 3rem;
+          background-position: center;
         }
-      }
-
-      &:before {
-        content: "";
-        position: absolute;
-        left: 1.875rem;
-        top: -1.25rem;
-        background-image: url(../images/quote-left.svg);
-        background-color: #fff;
-        background-size: 70%;
-        background-repeat: no-repeat;
-        width: 6rem;
-        height: 3rem;
-        background-position: center;
-      }
-
-      &:after {
-        content: "";
-        position: absolute;
-        right: 1.875rem;
-        bottom: -1.25rem;
-        background-image: url(../images/quote-right.svg);
-        background-color: #fff;
-        background-size: 70%;
-        background-repeat: no-repeat;
-        width: 6rem;
-        height: 3rem;
-        background-position: center;
       }
     }
     .slick-prev,

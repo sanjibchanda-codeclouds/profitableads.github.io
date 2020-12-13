@@ -6749,7 +6749,7 @@ p {
   width: auto;
   display: inline-block;
   font-size: 1.25rem;
-  padding: 1.2rem 2rem;
+  padding: 1rem 2rem;
   text-align: center;
   box-shadow: none;
   border: 0;
@@ -6764,7 +6764,7 @@ p {
 
 .btn-sm {
   font-size: 1.125rem;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
   text-transform: uppercase; }
 
 .btn-primary {
@@ -6911,7 +6911,7 @@ p {
       background-color: #fff;
       color: #6d5e58;
       background-clip: padding-box;
-      border: 1px solid #645454;
+      border: 1px solid #fd5e00;
       -webkit-border-radius: 2px;
       -moz-border-radius: 2px;
       -o-border-radius: 2px;
@@ -6930,7 +6930,7 @@ p {
       font-weight: 400;
       line-height: 1.5;
       padding: 0.375rem 0.75rem;
-      border: 1px solid #645454;
+      border: 1px solid #979797;
       background-color: #fff;
       color: #6d5e58;
       -webkit-border-radius: 2px;
@@ -6973,7 +6973,7 @@ p {
       .form_container .form-group .form-check .check {
         display: block;
         position: absolute;
-        border: 2px solid #645454;
+        border: 2px solid #979797;
         -webkit-border-radius: 100%;
         -moz-border-radius: 100%;
         -o-border-radius: 100%;
@@ -7094,18 +7094,18 @@ p {
   .table td {
     padding: 0.5rem;
     vertical-align: top;
-    border-top: 1px solid #645454; }
+    border-top: 1px solid #979797; }
     @media (max-width: 478px) {
       .table th,
       .table td {
         padding: 0.375rem; } }
   .table thead th {
     vertical-align: middle;
-    border-bottom: 2px solid #645454;
+    border-bottom: 2px solid #979797;
     background-color: #ffbe97;
     color: #6d5e58; }
   .table tbody + tbody {
-    border-top: 2px solid #645454; }
+    border-top: 2px solid #979797; }
 
 .table-striped tbody tr:nth-of-type(even) {
   background-color: #010002;
@@ -7305,7 +7305,7 @@ hr {
   margin-top: 1em;
   margin-bottom: 1em;
   border: 0;
-  border-top: 1px solid #645454; }
+  border-top: 1px solid #979797; }
 
 .success {
   color: #06c167; }
@@ -7796,7 +7796,8 @@ hr {
           transform: translateX(-50%);
           width: 6rem;
           height: 1px;
-          background-color: #645454; }
+          background-color: #e4e4e4;
+          color: #6d5e58; }
         .package_wrap_box .price::after {
           content: "";
           position: absolute;
@@ -7805,7 +7806,8 @@ hr {
           transform: translateX(-50%);
           width: 6rem;
           height: 1px;
-          background-color: #645454; }
+          background-color: #e4e4e4;
+          color: #6d5e58; }
         .package_wrap_box .price .cross {
           text-decoration: line-through; }
         .package_wrap_box .price .mark {
@@ -7817,7 +7819,8 @@ hr {
         margin-bottom: 3em; }
         .package_wrap_box ul li {
           position: relative;
-          border-top: 1px #645454 solid;
+          border-top: 1px #979797 solid;
+          border-color: #e4e4e4;
           padding: 0.75rem 0 0.75rem 2rem; }
           .package_wrap_box ul li::before {
             content: "\f058";
@@ -7827,6 +7830,23 @@ hr {
             top: 0.625rem;
             color: #fda900;
             font-size: 1.25rem; }
+          .package_wrap_box ul li .badge {
+            display: inline-block;
+            background-color: #ff4700;
+            color: #fff;
+            padding: 0.125rem 2.5rem 0.125rem 0.5rem;
+            font-size: 0.75rem;
+            position: relative; }
+            .package_wrap_box ul li .badge:after {
+              content: "";
+              position: absolute;
+              top: 0;
+              right: 0;
+              width: 0;
+              height: 0;
+              border-top: 11px transparent solid;
+              border-right: 20px #fff solid;
+              border-bottom: 12px transparent solid; }
       .package_wrap_box .btn-primary {
         max-width: 300px;
         text-transform: uppercase;
@@ -7841,55 +7861,58 @@ hr {
   padding: 4.25rem 0 7.5rem; }
   .testimonial h3 {
     text-align: center;
-    margin-bottom: 0.5em; }
+    margin-bottom: 0.5em;
+    color: #000; }
   .testimonial .sub {
     text-align: center;
-    font-weight: 700; }
+    font-weight: 700;
+    color: #000; }
   .testimonial .slider {
     margin-top: 4.375em; }
     .testimonial .slider .item {
-      border: 2px solid #fda900;
-      padding: 3.75rem 1.875rem;
-      margin: 0 0.75rem;
-      position: relative;
-      min-height: 305px; }
-      .testimonial .slider .item .author {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        margin-top: 1.25em; }
-        .testimonial .slider .item .author .testi {
-          margin-right: 0.75em;
-          width: auto; }
-        .testimonial .slider .item .author p {
-          font-size: 0.938rem; }
-        .testimonial .slider .item .author span {
-          font-weight: 700;
-          display: block; }
-      .testimonial .slider .item:before {
-        content: "";
-        position: absolute;
-        left: 1.875rem;
-        top: -1.25rem;
-        background-image: url(../images/quote-left.svg);
-        background-color: #fff;
-        background-size: 70%;
-        background-repeat: no-repeat;
-        width: 6rem;
-        height: 3rem;
-        background-position: center; }
-      .testimonial .slider .item:after {
-        content: "";
-        position: absolute;
-        right: 1.875rem;
-        bottom: -1.25rem;
-        background-image: url(../images/quote-right.svg);
-        background-color: #fff;
-        background-size: 70%;
-        background-repeat: no-repeat;
-        width: 6rem;
-        height: 3rem;
-        background-position: center; }
+      padding: 1rem 0.75rem; }
+      .testimonial .slider .item_box {
+        border: 2px solid #fda900;
+        padding: 3.75rem 1.875rem;
+        position: relative;
+        min-height: 305px; }
+        .testimonial .slider .item_box .author {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin-top: 1.25em; }
+          .testimonial .slider .item_box .author .testi {
+            margin-right: 0.75em;
+            width: auto; }
+          .testimonial .slider .item_box .author p {
+            font-size: 0.938rem; }
+          .testimonial .slider .item_box .author span {
+            font-weight: 700;
+            display: block; }
+        .testimonial .slider .item_box:before {
+          content: "";
+          position: absolute;
+          left: 1.875rem;
+          top: -1.25rem;
+          background-image: url(../images/quote-left.svg);
+          background-color: #fff;
+          background-size: 70%;
+          background-repeat: no-repeat;
+          width: 6rem;
+          height: 3rem;
+          background-position: center; }
+        .testimonial .slider .item_box:after {
+          content: "";
+          position: absolute;
+          right: 1.875rem;
+          bottom: -1.25rem;
+          background-image: url(../images/quote-right.svg);
+          background-color: #fff;
+          background-size: 70%;
+          background-repeat: no-repeat;
+          width: 6rem;
+          height: 3rem;
+          background-position: center; }
     .testimonial .slider .slick-prev,
     .testimonial .slider .slick-next {
       display: none !important; }
