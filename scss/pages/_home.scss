@@ -172,10 +172,12 @@
   h3 {
     text-align: center;
     margin-bottom: 0.5em;
+    color: color(bg-dark);
   }
   p {
     text-align: center;
     font-weight: 700;
+    color: color(bg-dark);
   }
 
   .slider_box {
@@ -277,14 +279,14 @@
       }
 
       .prev-slide {
-        background: bg("owl-left.png") no-repeat;
+        background: bg("owl-left.svg") no-repeat;
         background-size: 100%;
         left: -1rem;
         transform: translateY(-50%);
       }
 
       .next-slide {
-        background: bg("owl-right.png") no-repeat;
+        background: bg("owl-right.svg") no-repeat;
         background-size: 100%;
         right: -1rem;
         transform: translateY(-50%);

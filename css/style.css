@@ -8281,10 +8281,12 @@ hr {
   padding: 3rem 0 6rem; }
   .slider_wrap h3 {
     text-align: center;
-    margin-bottom: 0.5em; }
+    margin-bottom: 0.5em;
+    color: #262626; }
   .slider_wrap p {
     text-align: center;
-    font-weight: 700; }
+    font-weight: 700;
+    color: #262626; }
   .slider_wrap .slider_box {
     padding-top: 3.75em; }
     .slider_wrap .slider_box #testimonials-list .item {
@@ -8356,12 +8358,12 @@ hr {
       pointer-events: none;
       opacity: 0.2; }
     .slider_wrap .slider_box .owl-carousel .prev-slide {
-      background: url("../images/owl-left.png") no-repeat;
+      background: url("../images/owl-left.svg") no-repeat;
       background-size: 100%;
       left: -1rem;
       transform: translateY(-50%); }
     .slider_wrap .slider_box .owl-carousel .next-slide {
-      background: url("../images/owl-right.png") no-repeat;
+      background: url("../images/owl-right.svg") no-repeat;
       background-size: 100%;
       right: -1rem;
       transform: translateY(-50%); }
