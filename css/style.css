@@ -8065,20 +8065,22 @@ hr {
     align-items: center; }
     .header .header_wrap .logo {
       width: 200px; }
-    .header .header_wrap .sidenav .menu {
-      display: flex;
-      justify-content: space-between;
-      align-items: center; }
-      .header .header_wrap .sidenav .menu li + li {
-        padding-left: 1.5em; }
-        @media (min-width: 1200px) {
-          .header .header_wrap .sidenav .menu li + li {
-            padding-left: 1.875em; } }
-      .header .header_wrap .sidenav .menu a {
-        color: #fff;
-        font-weight: 500; }
-        .header .header_wrap .sidenav .menu a:hover {
-          color: #fda900; }
+    .header .header_wrap .sidenav {
+      flex: 1; }
+      .header .header_wrap .sidenav .menu {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center; }
+        .header .header_wrap .sidenav .menu li + li {
+          padding-left: 1.5em; }
+          @media (min-width: 1200px) {
+            .header .header_wrap .sidenav .menu li + li {
+              padding-left: 1.875em; } }
+        .header .header_wrap .sidenav .menu a {
+          color: #fff;
+          font-weight: 500; }
+          .header .header_wrap .sidenav .menu a:hover {
+            color: #fda900; }
     @media (max-width: 991px) {
       .header .header_wrap .bars {
         display: block;
